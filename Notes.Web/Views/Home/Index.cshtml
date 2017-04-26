@@ -1,0 +1,17 @@
+﻿@model Notes.Web.Models.User
+
+<div id="loader"></div>
+<div style="display:none;" id="myDiv" class="animate-bottom">
+    <div class="notes">
+        <div id="note-container"></div>
+        <div id="note-container2"></div>
+    </div>
+</div>
+
+<div id="button-placeholder">
+    <button id="btn-error" type="button" onclick="location.href='@Url.Action("Index", "Home")'">Try again</button>
+</div>
+
+@section scripts {
+    @Scripts.Render("~/Scripts/GenerateNotes.js")
+}

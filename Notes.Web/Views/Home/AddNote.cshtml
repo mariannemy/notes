@@ -1,0 +1,9 @@
+﻿@model Notes.Web.ViewModels.NoteViewModel
+
+@using (Html.BeginForm("AddNote", "Home"))
+{
+    <div class="form-group">
+        @Html.TextAreaFor(c => c.Text, new { @autofocus = "autofocus" })
+    </div>
+    <button type="submit" class="btn-save-add">Save</button>
+}
